@@ -1,12 +1,25 @@
 body {
     font-family: 'Roboto', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.header,
+.hero {
+    background-color: #1f2937;
+}
+
+.header .logo,
+.hero .main-text {
+    color: #f9faf8;
 }
 
 .header {
-    background-color: #1f2937;
-    position: fixed;
-    top: 0px;
-    left: 0px;
+    margin-top: 0;
     width: 100%;
     display: flex;
     justify-content: space-around;
@@ -14,13 +27,60 @@ body {
 }
 
 .header .logo {
-    color: #f9faf8;
     font-size: 24px;
 }
 
 .header .links {
-    color: #e5e7eb;
-    font-size: 18px;
     display: flex;
     gap: 18px
+}
+
+.header .links,
+.hero p {
+    color: #e5e7eb;
+    font-size: 18px;
+}
+
+.hero {
+    padding-top: 48px;
+    display: flex;
+}
+
+.hero .item {
+    flex-basis: 100%;
+}
+
+.hero .text {
+    padding-left: 48px;
+}
+
+.hero .main-text {
+    font-size: 48px;
+    font-weight: 800;
+}
+
+.img-placeholder {
+    background-color: gray;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    margin-left: 72px;
+    margin-right: 72px;
+}
+
+button {
+    background-color: #3882F6;
+    color: white;
+    border-radius: 10px;
+}
+
+button span {
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    display: inline-block;
+    font-weight: bold;
 }
