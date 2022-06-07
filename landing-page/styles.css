@@ -87,6 +87,10 @@ button span {
     font-weight: bold;
 }
 
+.information {
+    padding-bottom: 48px;
+}
+
 .information h2 {
     text-align: center;
     font-weight: 800;
@@ -118,4 +122,25 @@ button span {
     width: 175px;
     text-align: center;
     font-style: italic;
+}
+
+.quote {
+    background-color: #e5e7eb;
+    padding-block: 48px;
+    padding-inline: 128px;
+}
+
+.quote .main-text {
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.quote .author {
+    color: black;
+    font-weight: 900;
+    text-align: right;
+    font-size: 24px;
+
 }
