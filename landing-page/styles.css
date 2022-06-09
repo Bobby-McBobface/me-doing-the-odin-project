@@ -75,6 +75,7 @@ h1 {
 button {
     background-color: #3882F6;
     color: white;
+    border-color: #e5e7eb;
     border-radius: 10px;
 }
 
@@ -142,5 +143,37 @@ button span {
     font-weight: 900;
     text-align: right;
     font-size: 24px;
+}
 
+.call-to-action {
+    padding-block: 48px;
+    padding-inline: 128px;
+}
+
+.call-to-action .blue {
+    background-color: #3882F6;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.call-to-action .flex {
+    display: flex;
+    flex-wrap: wrap;
+    padding-block: 48px;
+    padding-inline: 72px;
+    justify-content: center;
+    color: #f9faf8;
+    justify-self: center;
+}
+
+.call-to-action h5 {
+    flex: 1 1 100%;
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+}
+
+.call-to-action p {
+    margin-block: auto;
+    margin-right: auto;
 }
