@@ -27,18 +27,10 @@ function playRound(playerSelection, computerSelection) {
 
 function game() {
     let score = 0;
-    for (let i = 0; i < 5; i++) {
-        const playerSelecton = prompt(
-            "Choose an action: (rock, paper, scissors)"
-        );
-        const computerSelection = computerPlay();
-        const [message, scoreOffset] = playRound(
-            playerSelecton,
-            computerSelection
-        );
-        score += scoreOffset;
-        console.log(message);
-    }
+    const computerSelection = computerPlay();
+    const [message, scoreOffset] = playRound(playerSelecton, computerSelection);
+    score += scoreOffset;
+    console.log(message);
     if (score > 0) {
         console.log("You win!");
     } else if (score < 0) {
