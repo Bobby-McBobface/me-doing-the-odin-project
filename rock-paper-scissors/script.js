@@ -26,6 +26,8 @@ function playRound(playerSelection, computerSelection) {
 }
 
 let score = 0;
+const resultsDiv = document.getElementById("results");
+const scoreDiv = document.getElementById("score");
 
 function game(playerSelection) {
     const computerSelection = computerPlay();
@@ -34,25 +36,26 @@ function game(playerSelection) {
         computerSelection
     );
     score += scoreOffset;
-    console.log(message);
+    scoreDiv.textContent = score;
+    resultsDiv.textContent = message;
     if (score >= 5) {
-        console.log("You win!");
+        resultsDiv.textContent = "You win!"
     } else if (score <= -5) {
-        console.log("You lose!");
+        resultsDiv.textContent = "You lose!"
     }
 }
 
-const rock = document.getElementById("rock")
+const rock = document.getElementById("rock");
 rock.addEventListener("click", () => {
     game("rock");
 });
 
-const paper = document.getElementById("paper")
+const paper = document.getElementById("paper");
 paper.addEventListener("click", () => {
     game("paper");
 });
 
-const scissors = document.getElementById("scissors")
+const scissors = document.getElementById("scissors");
 scissors.addEventListener("onclick", () => {
     game("scissors");
 });
