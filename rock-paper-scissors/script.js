@@ -25,19 +25,34 @@ function playRound(playerSelection, computerSelection) {
     return ["Invalid choice", 0];
 }
 
-function game() {
-    let score = 0;
+let score = 0;
+
+function game(playerSelection) {
     const computerSelection = computerPlay();
-    const [message, scoreOffset] = playRound(playerSelecton, computerSelection);
+    const [message, scoreOffset] = playRound(
+        playerSelection,
+        computerSelection
+    );
     score += scoreOffset;
     console.log(message);
-    if (score > 0) {
+    if (score >= 5) {
         console.log("You win!");
-    } else if (score < 0) {
+    } else if (score <= -5) {
         console.log("You lose!");
-    } else {
-        console.log("It's a draw!");
     }
 }
 
-game();
+const rock = document.getElementById("rock")
+rock.addEventListener("click", () => {
+    game("rock");
+});
+
+const paper = document.getElementById("paper")
+paper.addEventListener("click", () => {
+    game("paper");
+});
+
+const scissors = document.getElementById("scissors")
+scissors.addEventListener("onclick", () => {
+    game("scissors");
+});
